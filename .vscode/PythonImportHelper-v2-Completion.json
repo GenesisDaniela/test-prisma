@@ -1,0 +1,553 @@
+[
+    {
+        "label": "b64decode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Marshmallow",
+        "importPath": "flask_marshmallow",
+        "description": "flask_marshmallow",
+        "isExtraImport": true,
+        "detail": "flask_marshmallow",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {}
+    },
+    {
+        "label": "Api",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {}
+    },
+    {
+        "label": "Api",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {}
+    },
+    {
+        "label": "LoginInfoDTO",
+        "importPath": "financialControl.dto.login_info_dto",
+        "description": "financialControl.dto.login_info_dto",
+        "isExtraImport": true,
+        "detail": "financialControl.dto.login_info_dto",
+        "documentation": {}
+    },
+    {
+        "label": "NoResultFound",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "NoResultFound",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "NoResultFound",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "AuthResource",
+        "importPath": "financialControl.routes.auth.api.resources.authResource",
+        "description": "financialControl.routes.auth.api.resources.authResource",
+        "isExtraImport": true,
+        "detail": "financialControl.routes.auth.api.resources.authResource",
+        "documentation": {}
+    },
+    {
+        "label": "billsSchema",
+        "importPath": "financialControl.schemas.bill_schema",
+        "description": "financialControl.schemas.bill_schema",
+        "isExtraImport": true,
+        "detail": "financialControl.schemas.bill_schema",
+        "documentation": {}
+    },
+    {
+        "label": "cross_origin",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "cross_origin",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "financialControl.config.auth_middleware",
+        "description": "financialControl.config.auth_middleware",
+        "isExtraImport": true,
+        "detail": "financialControl.config.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "financialControl.config.auth_middleware",
+        "description": "financialControl.config.auth_middleware",
+        "isExtraImport": true,
+        "detail": "financialControl.config.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "UserBillsResource",
+        "importPath": "financialControl.routes.user.api.resources.UserBillsResource",
+        "description": "financialControl.routes.user.api.resources.UserBillsResource",
+        "isExtraImport": true,
+        "detail": "financialControl.routes.user.api.resources.UserBillsResource",
+        "documentation": {}
+    },
+    {
+        "label": "UserBillsIdResource",
+        "importPath": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "description": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "isExtraImport": true,
+        "detail": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "financialControl",
+        "description": "financialControl",
+        "isExtraImport": true,
+        "detail": "financialControl",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "kind": 2,
+        "importPath": "financialControl.config.auth_middleware",
+        "description": "financialControl.config.auth_middleware",
+        "peekOfCode": "def token_required(f):\n    @wraps(f)\n    def decorated(*args, **kwargs):\n        token = None\n        if \"Authorization\" in request.headers:\n            token = request.headers[\"Authorization\"].split(\" \")[1]\n        if not token:\n            return {\n                \"message\": \"Authentication Token is missing! , please log in via /login and paste the token\",\n                \"error\": \"Unauthorized\"",
+        "detail": "financialControl.config.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModelMixin",
+        "kind": 6,
+        "importPath": "financialControl.config.db",
+        "description": "financialControl.config.db",
+        "peekOfCode": "class BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()\n    @classmethod\n    def get_all(cls):\n        return cls.query.all()",
+        "detail": "financialControl.config.db",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "financialControl.config.db",
+        "description": "financialControl.config.db",
+        "peekOfCode": "db = SQLAlchemy()\nclass BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()\n    @classmethod\n    def get_all(cls):",
+        "detail": "financialControl.config.db",
+        "documentation": {}
+    },
+    {
+        "label": "ma",
+        "kind": 5,
+        "importPath": "financialControl.config.ma",
+        "description": "financialControl.config.ma",
+        "peekOfCode": "ma = Marshmallow()",
+        "detail": "financialControl.config.ma",
+        "documentation": {}
+    },
+    {
+        "label": "LoginInfoDTO",
+        "kind": 6,
+        "importPath": "financialControl.dto.login_info_dto",
+        "description": "financialControl.dto.login_info_dto",
+        "peekOfCode": "class LoginInfoDTO():\n    def __init__(self,username, password):\n        self.username = username\n        self.password = password",
+        "detail": "financialControl.dto.login_info_dto",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "kind": 6,
+        "importPath": "financialControl.models.bill",
+        "description": "financialControl.models.bill",
+        "peekOfCode": "class Bill(db.Model, BaseModelMixin):\n    __tablename__ = 'bill'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    date_bill=db.Column(db.Date)\n    user_id=db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)\n    type_ = db.Column('type',db.Integer,  nullable=False)\n    value=db.Column(db.Integer,  nullable=False)\n    observation = db.Column(db.String(120),  nullable=False)\n    user = db.relationship(\"User\")\n    def __init__(self, id, user_id, value, type_, observation):",
+        "detail": "financialControl.models.bill",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "financialControl.models.user",
+        "description": "financialControl.models.user",
+        "peekOfCode": "class User(db.Model, BaseModelMixin):\n    __tablename__ = 'users'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    username=db.Column(db.String(50))\n    password=db.Column('pass',db.String(500))\n    email=db.Column(db.String(100))\n    def __init__(self, id, username, password, email):\n        self.id = id\n        self.username = username\n        self.password = password",
+        "detail": "financialControl.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "AuthResource",
+        "kind": 6,
+        "importPath": "financialControl.routes.auth.api.resources.authResource",
+        "description": "financialControl.routes.auth.api.resources.authResource",
+        "peekOfCode": "class AuthResource(Resource):\n    def post(self):\n        try:\n            print(User.simple_filter)\n            data = request.get_json()\n            if not data:\n                return {\n                    \"message\": \"Please provide user details\",\n                    \"data\": None,\n                    \"error\": \"Bad request\"",
+        "detail": "financialControl.routes.auth.api.resources.authResource",
+        "documentation": {}
+    },
+    {
+        "label": "auth_api",
+        "kind": 5,
+        "importPath": "financialControl.routes.auth.api.resource",
+        "description": "financialControl.routes.auth.api.resource",
+        "peekOfCode": "auth_api = Blueprint('auth_api', __name__)\napi = Api(auth_api)\napi.add_resource(AuthResource, '/login', endpoint='login_resource')",
+        "detail": "financialControl.routes.auth.api.resource",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "financialControl.routes.auth.api.resource",
+        "description": "financialControl.routes.auth.api.resource",
+        "peekOfCode": "api = Api(auth_api)\napi.add_resource(AuthResource, '/login', endpoint='login_resource')",
+        "detail": "financialControl.routes.auth.api.resource",
+        "documentation": {}
+    },
+    {
+        "label": "UserBillsIdResource",
+        "kind": 6,
+        "importPath": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "description": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "peekOfCode": "class UserBillsIdResource(Resource):\n    @cross_origin()\n    @token_required\n    def get(self, username, bill_id):\n        # \"\"\"returns the bills of the logged in user identified by bill id\n        # ---\n        # tags:\n        # - Bill\n        # definitions:\n        # Bill:",
+        "detail": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "documentation": {}
+    },
+    {
+        "label": "UserBillsResource",
+        "kind": 6,
+        "importPath": "financialControl.routes.user.api.resources.UserBillsResource",
+        "description": "financialControl.routes.user.api.resources.UserBillsResource",
+        "peekOfCode": "class UserBillsResource(Resource):\n    @cross_origin()\n    @token_required\n    def get(self,user): \n        try:\n            user_found = User.simple_filterByOne(username=user)\n            bills = Bill.simple_filter(user_id=user_found.id)\n        except NoResultFound:\n            return {f\"user {user} not found\"}, 404\n        response = billsSchema.dump(bills)",
+        "detail": "financialControl.routes.user.api.resources.UserBillsResource",
+        "documentation": {}
+    },
+    {
+        "label": "user_api",
+        "kind": 5,
+        "importPath": "financialControl.routes.user.api.resource",
+        "description": "financialControl.routes.user.api.resource",
+        "peekOfCode": "user_api = Blueprint('user_api', __name__)\nbill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "detail": "financialControl.routes.user.api.resource",
+        "documentation": {}
+    },
+    {
+        "label": "bill_schema",
+        "kind": 5,
+        "importPath": "financialControl.routes.user.api.resource",
+        "description": "financialControl.routes.user.api.resource",
+        "peekOfCode": "bill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "detail": "financialControl.routes.user.api.resource",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "financialControl.routes.user.api.resource",
+        "description": "financialControl.routes.user.api.resource",
+        "peekOfCode": "api = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "detail": "financialControl.routes.user.api.resource",
+        "documentation": {}
+    },
+    {
+        "label": "BillSchema",
+        "kind": 6,
+        "importPath": "financialControl.schemas.bill_schema",
+        "description": "financialControl.schemas.bill_schema",
+        "peekOfCode": "class BillSchema(ma.SQLAlchemyAutoSchema):\n    class Meta:\n        model = Bill\n    user = ma.Function(lambda obj: obj.user.username)\nbillSchema = BillSchema()\nbillsSchema = BillSchema(many=True)",
+        "detail": "financialControl.schemas.bill_schema",
+        "documentation": {}
+    },
+    {
+        "label": "billSchema",
+        "kind": 5,
+        "importPath": "financialControl.schemas.bill_schema",
+        "description": "financialControl.schemas.bill_schema",
+        "peekOfCode": "billSchema = BillSchema()\nbillsSchema = BillSchema(many=True)",
+        "detail": "financialControl.schemas.bill_schema",
+        "documentation": {}
+    },
+    {
+        "label": "billsSchema",
+        "kind": 5,
+        "importPath": "financialControl.schemas.bill_schema",
+        "description": "financialControl.schemas.bill_schema",
+        "peekOfCode": "billsSchema = BillSchema(many=True)",
+        "detail": "financialControl.schemas.bill_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "kind": 6,
+        "importPath": "financialControl.schemas.user_schema",
+        "description": "financialControl.schemas.user_schema",
+        "peekOfCode": "class UserSchema(ma.SQLAlchemyAutoSchema):\n    class Meta:\n        model = User\nuserSchema = UserSchema()\nusersSchema = UserSchema(many=True)",
+        "detail": "financialControl.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "userSchema",
+        "kind": 5,
+        "importPath": "financialControl.schemas.user_schema",
+        "description": "financialControl.schemas.user_schema",
+        "peekOfCode": "userSchema = UserSchema()\nusersSchema = UserSchema(many=True)",
+        "detail": "financialControl.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "usersSchema",
+        "kind": 5,
+        "importPath": "financialControl.schemas.user_schema",
+        "description": "financialControl.schemas.user_schema",
+        "peekOfCode": "usersSchema = UserSchema(many=True)",
+        "detail": "financialControl.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "importlib_load_entry_point",
+        "kind": 2,
+        "importPath": "venv.Scripts.gunicorn-script",
+        "description": "venv.Scripts.gunicorn-script",
+        "peekOfCode": "def importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')\n    matches = (\n        entry_point\n        for entry_point in distribution(dist_name).entry_points\n        if entry_point.group == group and entry_point.name == name\n    )\n    return next(matches).load()\nglobals().setdefault('load_entry_point', importlib_load_entry_point)\nif __name__ == '__main__':",
+        "detail": "venv.Scripts.gunicorn-script",
+        "documentation": {}
+    },
+    {
+        "label": "__requires__",
+        "kind": 5,
+        "importPath": "venv.Scripts.gunicorn-script",
+        "description": "venv.Scripts.gunicorn-script",
+        "peekOfCode": "__requires__ = 'gunicorn==19.0.0'\ntry:\n    from importlib.metadata import distribution\nexcept ImportError:\n    try:\n        from importlib_metadata import distribution\n    except ImportError:\n        from pkg_resources import load_entry_point\ndef importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')",
+        "detail": "venv.Scripts.gunicorn-script",
+        "documentation": {}
+    },
+    {
+        "label": "importlib_load_entry_point",
+        "kind": 2,
+        "importPath": "venv.Scripts.gunicorn_django-script",
+        "description": "venv.Scripts.gunicorn_django-script",
+        "peekOfCode": "def importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')\n    matches = (\n        entry_point\n        for entry_point in distribution(dist_name).entry_points\n        if entry_point.group == group and entry_point.name == name\n    )\n    return next(matches).load()\nglobals().setdefault('load_entry_point', importlib_load_entry_point)\nif __name__ == '__main__':",
+        "detail": "venv.Scripts.gunicorn_django-script",
+        "documentation": {}
+    },
+    {
+        "label": "__requires__",
+        "kind": 5,
+        "importPath": "venv.Scripts.gunicorn_django-script",
+        "description": "venv.Scripts.gunicorn_django-script",
+        "peekOfCode": "__requires__ = 'gunicorn==19.0.0'\ntry:\n    from importlib.metadata import distribution\nexcept ImportError:\n    try:\n        from importlib_metadata import distribution\n    except ImportError:\n        from pkg_resources import load_entry_point\ndef importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')",
+        "detail": "venv.Scripts.gunicorn_django-script",
+        "documentation": {}
+    },
+    {
+        "label": "importlib_load_entry_point",
+        "kind": 2,
+        "importPath": "venv.Scripts.gunicorn_paster-script",
+        "description": "venv.Scripts.gunicorn_paster-script",
+        "peekOfCode": "def importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')\n    matches = (\n        entry_point\n        for entry_point in distribution(dist_name).entry_points\n        if entry_point.group == group and entry_point.name == name\n    )\n    return next(matches).load()\nglobals().setdefault('load_entry_point', importlib_load_entry_point)\nif __name__ == '__main__':",
+        "detail": "venv.Scripts.gunicorn_paster-script",
+        "documentation": {}
+    },
+    {
+        "label": "__requires__",
+        "kind": 5,
+        "importPath": "venv.Scripts.gunicorn_paster-script",
+        "description": "venv.Scripts.gunicorn_paster-script",
+        "peekOfCode": "__requires__ = 'gunicorn==19.0.0'\ntry:\n    from importlib.metadata import distribution\nexcept ImportError:\n    try:\n        from importlib_metadata import distribution\n    except ImportError:\n        from pkg_resources import load_entry_point\ndef importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')",
+        "detail": "venv.Scripts.gunicorn_paster-script",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "entrypoint",
+        "description": "entrypoint",
+        "peekOfCode": "app = create_app()\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "entrypoint",
+        "documentation": {}
+    }
+]
