@@ -30,7 +30,7 @@ def create_app():
         "info": {
             'title': 'Financial Control Prisma',
             'version': '1.0.0',
-            'description': 'Technical test. Prisma has considered developing an expense management and control system to help its employees control their monthly budget. control system so that they can control their monthly budget. For this purpose, it is requested to develop the Back-end layer services using the necessary technologies',
+            'description': 'Technical test. Prisma has considered developing an expense management and control system to help its employees control their monthly budget. control system so that they can control their monthly budget. For this purpose, it is requested to develop the Back-end layer services using the necessary technologies. You must enter in authorize the Bearer token that is returned in the login endpoint.',
         },
         "host": "test-prisma-v1.herokuapp.com",
         "schemes":["https"],
