@@ -169,14 +169,6 @@
         "documentation": {}
     },
     {
-        "label": "LoginInfoDTO",
-        "importPath": "financialControl.dto.login_info_dto",
-        "description": "financialControl.dto.login_info_dto",
-        "isExtraImport": true,
-        "detail": "financialControl.dto.login_info_dto",
-        "documentation": {}
-    },
-    {
         "label": "NoResultFound",
         "importPath": "sqlalchemy.exc",
         "description": "sqlalchemy.exc",
@@ -225,6 +217,22 @@
         "documentation": {}
     },
     {
+        "label": "token_required",
+        "importPath": "financialControl.config.auth_middleware",
+        "description": "financialControl.config.auth_middleware",
+        "isExtraImport": true,
+        "detail": "financialControl.config.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "token_required",
+        "importPath": "financialControl.config.auth_middleware",
+        "description": "financialControl.config.auth_middleware",
+        "isExtraImport": true,
+        "detail": "financialControl.config.auth_middleware",
+        "documentation": {}
+    },
+    {
         "label": "cross_origin",
         "importPath": "flask_cors",
         "description": "flask_cors",
@@ -249,11 +257,11 @@
         "documentation": {}
     },
     {
-        "label": "token_required",
-        "importPath": "financialControl.config.auth_middleware",
-        "description": "financialControl.config.auth_middleware",
+        "label": "jwt_required",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
         "isExtraImport": true,
-        "detail": "financialControl.config.auth_middleware",
+        "detail": "flask_jwt_extended",
         "documentation": {}
     },
     {
@@ -270,6 +278,14 @@
         "description": "financialControl.routes.user.api.resources.UserBillsIdResource",
         "isExtraImport": true,
         "detail": "financialControl.routes.user.api.resources.UserBillsIdResource",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "marshmallow",
+        "description": "marshmallow",
+        "isExtraImport": true,
+        "detail": "marshmallow",
         "documentation": {}
     },
     {
@@ -312,7 +328,7 @@
         "kind": 6,
         "importPath": "financialControl.config.db",
         "description": "financialControl.config.db",
-        "peekOfCode": "class BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()\n    @classmethod\n    def get_all(cls):\n        return cls.query.all()",
+        "peekOfCode": "class BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def update(self):\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()\n    @classmethod",
         "detail": "financialControl.config.db",
         "documentation": {}
     },
@@ -321,7 +337,7 @@
         "kind": 5,
         "importPath": "financialControl.config.db",
         "description": "financialControl.config.db",
-        "peekOfCode": "db = SQLAlchemy()\nclass BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()\n    @classmethod\n    def get_all(cls):",
+        "peekOfCode": "db = SQLAlchemy()\nclass BaseModelMixin:\n    def save(self):\n        db.session.add(self)\n        db.session.commit()\n    def update(self):\n        db.session.commit()\n    def delete(self):\n        db.session.delete(self)\n        db.session.commit()",
         "detail": "financialControl.config.db",
         "documentation": {}
     },
@@ -335,20 +351,11 @@
         "documentation": {}
     },
     {
-        "label": "LoginInfoDTO",
-        "kind": 6,
-        "importPath": "financialControl.dto.login_info_dto",
-        "description": "financialControl.dto.login_info_dto",
-        "peekOfCode": "class LoginInfoDTO():\n    def __init__(self,username, password):\n        self.username = username\n        self.password = password",
-        "detail": "financialControl.dto.login_info_dto",
-        "documentation": {}
-    },
-    {
         "label": "Bill",
         "kind": 6,
         "importPath": "financialControl.models.bill",
         "description": "financialControl.models.bill",
-        "peekOfCode": "class Bill(db.Model, BaseModelMixin):\n    __tablename__ = 'bill'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    date_bill=db.Column(db.Date)\n    user_id=db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)\n    type_ = db.Column('type',db.Integer,  nullable=False)\n    value=db.Column(db.Integer,  nullable=False)\n    observation = db.Column(db.String(120),  nullable=False)\n    user = db.relationship(\"User\")\n    def __init__(self, id, user_id, value, type_, observation):",
+        "peekOfCode": "class Bill(db.Model, BaseModelMixin):\n    __tablename__ = 'bill'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    date_bill=db.Column(db.Date)\n    user_id=db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)\n    type_ = db.Column('type',db.Integer,  nullable=False)\n    value=db.Column(db.Integer,  nullable=False)\n    observation = db.Column(db.String(120),  nullable=False)\n    user = db.relationship(\"User\", back_populates=\"bill\")\n    def __init__(self, id, user_id, value, type_, observation):",
         "detail": "financialControl.models.bill",
         "documentation": {}
     },
@@ -357,7 +364,7 @@
         "kind": 6,
         "importPath": "financialControl.models.user",
         "description": "financialControl.models.user",
-        "peekOfCode": "class User(db.Model, BaseModelMixin):\n    __tablename__ = 'users'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    username=db.Column(db.String(50))\n    password=db.Column('pass',db.String(500))\n    email=db.Column(db.String(100))\n    def __init__(self, id, username, password, email):\n        self.id = id\n        self.username = username\n        self.password = password",
+        "peekOfCode": "class User(db.Model, BaseModelMixin):\n    __tablename__ = 'users'\n    id=db.Column(db.Integer, primary_key=True, nullable=False)\n    username=db.Column(db.String(50))\n    password=db.Column('pass',db.String(500))\n    email=db.Column(db.String(100))\n    bill = db.relationship(\"Bill\", back_populates=\"user\")\n    def __init__(self, id, username, password, email):\n        self.id = id\n        self.username = username",
         "detail": "financialControl.models.user",
         "documentation": {}
     },
@@ -366,7 +373,7 @@
         "kind": 6,
         "importPath": "financialControl.routes.auth.api.resources.authResource",
         "description": "financialControl.routes.auth.api.resources.authResource",
-        "peekOfCode": "class AuthResource(Resource):\n    def post(self):\n        try:\n            print(User.get_all())\n            data = request.get_json()\n            if not data:\n                return {\n                    \"message\": \"Please provide user details\",\n                    \"data\": None,\n                    \"error\": \"Bad request\"",
+        "peekOfCode": "class AuthResource(Resource):\n    def post(self):\n        \"\"\"Login user\n    ---\n    tags:\n      - Auth\n    parameters:\n      - name: body\n        in: body\n        required: true",
         "detail": "financialControl.routes.auth.api.resources.authResource",
         "documentation": {}
     },
@@ -393,7 +400,7 @@
         "kind": 6,
         "importPath": "financialControl.routes.user.api.resources.UserBillsIdResource",
         "description": "financialControl.routes.user.api.resources.UserBillsIdResource",
-        "peekOfCode": "class UserBillsIdResource(Resource):\n    @cross_origin()\n    @jwt_required()\n    def get(self, username, bill_id):\n        try:\n            user = User.simple_filterByOne(username=username)\n        except NoResultFound:\n            return {'msg':f'user with username: \\'{user}\\' not found'}, 404\n        try:\n            bill = Bill.simple_filterByOne(id = bill_id)",
+        "peekOfCode": "class UserBillsIdResource(Resource):\n    @cross_origin()\n    @token_required\n    def get(self, user, bill_id):\n        \"\"\"returns the bills of the logged in user identified by bill id\n    ---\n    tags:\n      - User\n    parameters:\n      - name: bill_id",
         "detail": "financialControl.routes.user.api.resources.UserBillsIdResource",
         "documentation": {}
     },
@@ -402,7 +409,7 @@
         "kind": 6,
         "importPath": "financialControl.routes.user.api.resources.UserBillsResource",
         "description": "financialControl.routes.user.api.resources.UserBillsResource",
-        "peekOfCode": "class UserBillsResource(Resource):\n    @cross_origin()\n    @token_required\n    def get(self,user): \n        try:\n            user_found = User.simple_filterByOne(username=user)\n            bills = Bill.simple_filter(user_id=user_found.id)\n        except NoResultFound:\n            return {f\"user {user} not found\"}, 404\n        response = billsSchema.dump(bills)",
+        "peekOfCode": "class UserBillsResource(Resource):\n    @cross_origin()\n    @token_required\n    def get(self,user): \n        \"\"\"returns a user's list bill of the logged in user \n    ---\n    tags:\n      - User\n    parameters:\n      - name: user",
         "detail": "financialControl.routes.user.api.resources.UserBillsResource",
         "documentation": {}
     },
@@ -411,7 +418,7 @@
         "kind": 5,
         "importPath": "financialControl.routes.user.api.resource",
         "description": "financialControl.routes.user.api.resource",
-        "peekOfCode": "user_api = Blueprint('user_api', __name__)\nbill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "peekOfCode": "user_api = Blueprint('user_api', __name__)\nbill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:user>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
         "detail": "financialControl.routes.user.api.resource",
         "documentation": {}
     },
@@ -420,7 +427,7 @@
         "kind": 5,
         "importPath": "financialControl.routes.user.api.resource",
         "description": "financialControl.routes.user.api.resource",
-        "peekOfCode": "bill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "peekOfCode": "bill_schema = BillSchema()\napi = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:user>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
         "detail": "financialControl.routes.user.api.resource",
         "documentation": {}
     },
@@ -429,7 +436,7 @@
         "kind": 5,
         "importPath": "financialControl.routes.user.api.resource",
         "description": "financialControl.routes.user.api.resource",
-        "peekOfCode": "api = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:username>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
+        "peekOfCode": "api = Api(user_api)\napi.add_resource(UserBillsIdResource, '/<string:user>/bills/<int:bill_id>', endpoint='user_bill_resource')\napi.add_resource(UserBillsResource, '/<string:user>/bills', endpoint='user_list_resource')",
         "detail": "financialControl.routes.user.api.resource",
         "documentation": {}
     },
@@ -438,7 +445,7 @@
         "kind": 6,
         "importPath": "financialControl.schemas.bill_schema",
         "description": "financialControl.schemas.bill_schema",
-        "peekOfCode": "class BillSchema(ma.SQLAlchemyAutoSchema):\n    class Meta:\n        model = Bill\n    user = ma.Function(lambda obj: obj.user.username)\nbillSchema = BillSchema()\nbillsSchema = BillSchema(many=True)",
+        "peekOfCode": "class BillSchema(ma.Schema):\n    user = fields.Nested(UserSchema(only=(\"username\",), many=False))\n    id=fields.Integer()\n    date_bill=fields.Date()\n    user_id=fields.Integer()\n    type_ = fields.Integer()\n    value=fields.Integer()\n    observation = fields.String()   \nbillSchema = BillSchema()\nbillsSchema = BillSchema(many=True)",
         "detail": "financialControl.schemas.bill_schema",
         "documentation": {}
     },

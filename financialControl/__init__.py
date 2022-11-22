@@ -9,24 +9,15 @@ from dotenv import load_dotenv
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
 from flask_jwt_extended import JWTManager
-
-SWAGGER_URL = '/swagger'
-API_URL = '/static/swagger.json'
-SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
-        SWAGGER_URL,
-        API_URL,
-        config={
-            'app_name': "Seans-Python-Flask-REST"
-        }
-    )
+from flasgger import Swagger
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
     api = Api(app)
-    jwt = JWTManager(app)
     CORS(app)
     load_dotenv()
     app.config['JSON_AS_ASCII'] = False
+    app.config['JWT_SECRET_KEY'] = "8f42a73054b1749f8f58848be5e6502c"
     app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://jnvgnqqv:aTo0Yykrx9nCmRavmYFsikv_usQtfOen@fanny.db.elephantsql.com/jnvgnqqv"
     # app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://prisma_test:prisma_pass@database-1.ct3gev1bipds.us-east-2.rds.amazonaws.com/testdb"
     db = SQLAlchemy(app)
@@ -37,8 +28,28 @@ def create_app():
     app.url_map.strict_slashes = False
     app.register_blueprint(user_api, url_prefix="/users")
     app.register_blueprint(auth_api)
-    
-    
-    app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
+    swagger_template = {
+        "info": {
+            'title': 'Financial Control Prisma',
+            'version': '1.0.0',
+            'description': 'Technical test. Prisma has considered developing an expense management and control system to help its employees control their monthly budget. control system so that they can control their monthly budget. For this purpose, it is requested to develop the Back-end layer services using the necessary technologies',
+        },
+        "host": "localhost:5000",
+        "schemes":["http"],
+        "securityDefinitions": {
+            "Bearer": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header",
+                "description": "Authorization: Bearer {token}"
+            }   
+        },
+        "security": [
+            {
+                "Bearer": []
+            }
+        ]
+    }
+    swagger = Swagger(app, template=swagger_template)
     return app
 

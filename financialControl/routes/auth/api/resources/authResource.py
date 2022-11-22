@@ -1,12 +1,49 @@
 from flask_restful import Resource
 from flask import request
-from financialControl.dto.login_info_dto import LoginInfoDTO
 from .....models.user import User
 from sqlalchemy.exc import NoResultFound
 import jwt
 
 class AuthResource(Resource):
+    
     def post(self):
+        """Login user
+    ---
+    tags:
+      - Auth
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/LoginInfo'
+    definitions:
+      LoginInfo:
+        type: object
+        properties:
+          username:
+            type: string
+          pass:
+            type: string
+      LoginResponse:
+        type: object
+        properties:
+          login:
+            type: boolean
+          username:
+            type: string
+          email:
+            type: string
+          mensaje:
+            type: string
+          token:
+            type: string
+    responses:
+      201:
+        description: User logged
+        schema:
+          $ref: '#/definitions/LoginResponse'
+    """
         try:
             print(User.get_all())
             data = request.get_json()
@@ -43,7 +80,7 @@ class AuthResource(Resource):
                     "username": is_validated.username,
                     "email": is_validated.email,
                     "mensaje": "Welcome",
-                    "token": token
+                    "token": "Bearer "+token
                 }
         except Exception as e:
             return {

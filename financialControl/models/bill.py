@@ -9,7 +9,7 @@ class Bill(db.Model, BaseModelMixin):
     type_ = db.Column('type',db.Integer,  nullable=False)
     value=db.Column(db.Integer,  nullable=False)
     observation = db.Column(db.String(120),  nullable=False)
-    user = db.relationship("User")
+    user = db.relationship("User", back_populates="bill")
     
     def __init__(self, id, user_id, value, type_, observation):
         self.id = id

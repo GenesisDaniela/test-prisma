@@ -7,6 +7,7 @@ class User(db.Model, BaseModelMixin):
     username=db.Column(db.String(50))
     password=db.Column('pass',db.String(500))
     email=db.Column(db.String(100))
+    bill = db.relationship("Bill", back_populates="user")
 
     def __init__(self, id, username, password, email):
         self.id = id
