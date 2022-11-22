@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restful import Api
 from .routes.user.api.resource import user_api
 from .routes.auth.api.resource import auth_api
-from flask_restful_swagger import swagger
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from dotenv import load_dotenv
