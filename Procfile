@@ -1,1 +1,1 @@
-web: gunicorn financialControl:app
+web: gunicorn entrypoint:financialControl:app
