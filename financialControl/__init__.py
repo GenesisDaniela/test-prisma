@@ -32,8 +32,8 @@ def create_app():
             'version': '1.0.0',
             'description': 'Technical test. Prisma has considered developing an expense management and control system to help its employees control their monthly budget. control system so that they can control their monthly budget. For this purpose, it is requested to develop the Back-end layer services using the necessary technologies',
         },
-        "host": "localhost:5000",
-        "schemes":["http"],
+        "host": "test-prisma-v1.herokuapp.com",
+        "schemes":["https"],
         "securityDefinitions": {
             "Bearer": {
                 "type": "apiKey",
