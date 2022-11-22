@@ -8,7 +8,6 @@ from flask_marshmallow import Marshmallow
 from dotenv import load_dotenv
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
-from flask_jwt_extended import JWTManager
 from flasgger import Swagger
 
 def create_app():
