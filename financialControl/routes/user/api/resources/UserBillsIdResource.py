@@ -7,36 +7,12 @@ from .....models.user import User
 from datetime import datetime
 from sqlalchemy.exc import NoResultFound, ArgumentError
 from flask_cors import cross_origin
-from financialControl.config.auth_middleware import token_required
+from flask_jwt_extended import jwt_required
 
 class UserBillsIdResource(Resource):
     @cross_origin()
-    @token_required
+    @jwt_required()
     def get(self, username, bill_id):
-        # """returns the bills of the logged in user identified by bill id
-        # ---
-        # tags:
-        # - Bill
-        # definitions:
-        # Bill:
-        #     type: object
-        #     properties:
-        #     id:
-        #         type: integer
-        #     date_bill:
-        #         type: date
-        #     value:
-        #         type: integer 
-        #     type:
-        #         type: integer
-        #     observation:
-        #         type: string
-        # responses:
-        # 200:
-        #     description: A bill
-        #     schema:
-        #     $ref: '#/definitions/Bill'
-        # """
         try:
             user = User.simple_filterByOne(username=username)
         except NoResultFound:
@@ -50,31 +26,8 @@ class UserBillsIdResource(Resource):
         return billSchema.dump(bill)
     
     @cross_origin()
-    @token_required
+    @jwt_required()
     def delete(self, username, bill_id):
-        # """deletes a bill of the logged in user and returns the bills of the logged in user identified by bill id
-        # ---
-        # tags:
-        # - Bill
-        # Bill:
-        #     type: object
-        #     properties:
-        #     id:
-        #         type: integer
-        #     date_bill:
-        #         type: date
-        #     value:
-        #         type: integer 
-        #     type:
-        #         type: integer
-        #     observation:
-        #         type: string
-        # responses:
-        # 200:
-        #     description: A list of bills
-        #     schema:
-        #     $ref: '#/definitions/Bill'
-        # """
         try:
             user = User.simple_filterByOne(username=username) 
         except NoResultFound:
@@ -89,7 +42,7 @@ class UserBillsIdResource(Resource):
         return billsSchema.dump(Bill.get_all())
     
     @cross_origin()
-    @token_required
+    @jwt_required()
     def put(self, username, bill_id): #falta validar el username perteniciente a la bill
         try:
             user = User.simple_filterByOne(username=username) 

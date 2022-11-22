@@ -8,7 +8,7 @@ import jwt
 class AuthResource(Resource):
     def post(self):
         try:
-            print(User.simple_filter)
+            print(User.get_all())
             data = request.get_json()
             if not data:
                 return {
@@ -18,8 +18,7 @@ class AuthResource(Resource):
                 }, 400
             try:
                 is_validated = User.simple_filterByOne(username=data['username'], password= data['pass'])
-                # print(is_validated)
-                # print(User.simple_filter)
+                print(is_validated)
             except Exception:
                 return {
                     "login":False,

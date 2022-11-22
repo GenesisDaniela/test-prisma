@@ -8,21 +8,22 @@ from flask_marshmallow import Marshmallow
 from dotenv import load_dotenv
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
-
+from flask_jwt_extended import JWTManager
 
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
 SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
-    SWAGGER_URL,
-    API_URL,
-    config={
-        'app_name': "Seans-Python-Flask-REST-Boilerplate"
-    }
-)
+        SWAGGER_URL,
+        API_URL,
+        config={
+            'app_name': "Seans-Python-Flask-REST"
+        }
+    )
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
     api = Api(app)
+    jwt = JWTManager(app)
     CORS(app)
     load_dotenv()
     app.config['JSON_AS_ASCII'] = False
@@ -36,6 +37,8 @@ def create_app():
     app.url_map.strict_slashes = False
     app.register_blueprint(user_api, url_prefix="/users")
     app.register_blueprint(auth_api)
+    
+    
     app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
     return app
 

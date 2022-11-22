@@ -1,0 +1,282 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "Technical test. qqPrisma has considered developing an expense management and control system to help its employees control their monthly budget. control system so that they can control their monthly budget. For this purpose, it is requested to develop the Back-end layer services using the necessary technologies (you can use the technology that you best handle, but preferably technology, but preferably Python).",
+        "version": "1.0.0",
+        "title": "Financial Control Prisma",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+
+    "responses": {
+        "UnauthorizedError": {
+            "description": "Access token is missing or invalid"
+        }
+    },
+    "tags": [{
+        "name": "User bills request",
+        "description": "API for requesting and return User Bills requests"
+    }],
+    "paths": {
+        "/users/{user}/bills": {
+            "parameters": [{
+                "name": "user",
+                "in": "path",
+                "required": true,
+                "description": "username of the user",
+                "type": "string"
+            }],
+            "post": {
+                "security": {
+                    "bearerAuth": []
+                },
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Saves a user's bill",
+                "requestBody": {
+                    "description": "bill Request Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/billRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/components/schemas/billRequests"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Returns the user's bill list",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    }
+                }
+            }
+        },
+        "/users/{user}/bills/{bill_id}": {
+            "parameters": [{
+                    "name": "user",
+                    "in": "path",
+                    "required": true,
+                    "description": "username of the user",
+                    "type": "string"
+                },
+                {
+                    "name": "bill_id",
+                    "in": "path",
+                    "required": true,
+                    "description": "username of the user",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Returns a user's bill",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Deletes a user's bill",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Updates a user's bill",
+                "requestBody": {
+                    "description": "bill Request Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/billRequest"
+                            }
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "User bills request"
+                ],
+                "summary": "Login user",
+                "requestBody": {
+                    "description": "Book Request Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LoginRequestPostBody"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "BearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+
+        "schemas": {
+            "user": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "pass": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    }
+                }
+            },
+            "bill": {
+                "properties": {
+                    "id": {
+                        "type": "Integer"
+                    },
+                    "date_bill": {
+                        "type": "Date"
+                    },
+                    "value": {
+                        "type": "Integer"
+                    },
+                    "type_": {
+                        "type": "string"
+                    },
+                    "observation": {
+                        "type": "String"
+                    },
+                    "user_id": {
+                        "type": "Integer"
+                    }
+                }
+            },
+            "billRequestPostBody": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "value": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "observation": {
+                        "type": "string",
+                        "format": "string"
+                    }
+                }
+            },
+            "LoginRequestPostBody": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "username": "string",
+                        "format": "string"
+                    },
+                    "pass": {
+                        "type": "string",
+                        "format": "string"
+                    }
+                }
+            },
+            "billRequest": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "value": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "observation": {
+                        "type": "string",
+                        "format": "string"
+                    }
+                }
+            },
+            "billRequests": {
+                "type": "object",
+                "properties": {
+                    "billRequest": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "#/components/schemas/billRequest"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
